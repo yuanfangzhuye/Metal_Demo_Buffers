@@ -14,6 +14,8 @@
 		F2E88BB524FF74D700556859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E88BB424FF74D700556859 /* Assets.xcassets */; };
 		F2E88BB824FF74D700556859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E88BB624FF74D700556859 /* LaunchScreen.storyboard */; };
 		F2E88BBB24FF74D700556859 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E88BBA24FF74D700556859 /* main.m */; };
+		F2E88BC424FF752800556859 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E88BC324FF752800556859 /* RenderManager.m */; };
+		F2E88BC724FF821500556859 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2E88BC624FF821500556859 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		F2E88BB724FF74D700556859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E88BB924FF74D700556859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E88BBA24FF74D700556859 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2E88BC224FF752800556859 /* RenderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderManager.h; sourceTree = "<group>"; };
+		F2E88BC324FF752800556859 /* RenderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenderManager.m; sourceTree = "<group>"; };
+		F2E88BC524FF81F800556859 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		F2E88BC624FF821500556859 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 				F2E88BAC24FF74D500556859 /* SceneDelegate.m */,
 				F2E88BAE24FF74D500556859 /* ViewController.h */,
 				F2E88BAF24FF74D500556859 /* ViewController.m */,
+				F2E88BC124FF74F400556859 /* Render */,
 				F2E88BB124FF74D500556859 /* Main.storyboard */,
 				F2E88BB424FF74D700556859 /* Assets.xcassets */,
 				F2E88BB624FF74D700556859 /* LaunchScreen.storyboard */,
@@ -74,6 +81,17 @@
 				F2E88BBA24FF74D700556859 /* main.m */,
 			);
 			path = Metal_Demo_Buffers;
+			sourceTree = "<group>";
+		};
+		F2E88BC124FF74F400556859 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				F2E88BC224FF752800556859 /* RenderManager.h */,
+				F2E88BC324FF752800556859 /* RenderManager.m */,
+				F2E88BC524FF81F800556859 /* ShaderTypes.h */,
+				F2E88BC624FF821500556859 /* Shaders.metal */,
+			);
+			path = Render;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,10 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E88BC724FF821500556859 /* Shaders.metal in Sources */,
 				F2E88BB024FF74D500556859 /* ViewController.m in Sources */,
 				F2E88BAA24FF74D500556859 /* AppDelegate.m in Sources */,
 				F2E88BBB24FF74D700556859 /* main.m in Sources */,
 				F2E88BAD24FF74D500556859 /* SceneDelegate.m in Sources */,
+				F2E88BC424FF752800556859 /* RenderManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +311,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Metal_Demo_Buffers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Metal_Demo_Buffers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
